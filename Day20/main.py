@@ -42,9 +42,11 @@ while game_is_on:
         or snake.head.ycor() < -280
     ):
         scoreboard.reset()
+        snake.reset()
 
     # Detect collision with tail
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             scoreboard.reset()
+            snake.reset()
 screen.exitonclick()
