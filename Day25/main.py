@@ -86,14 +86,24 @@ while len(guessed_states) < 50:
 
     # When game exit, make a list of missing answers by comparing guessed and full list, create a new csv with all the remaining answers
     if answer_state == "Exit":
-        missing_states = []
-        for state in states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        #     missing_states = []
+        #     for state in states:
+        #         if state not in guessed_states:
+        #             missing_states.append(state)
 
+        #     new_data = pandas.DataFrame(missing_states)
+
+        ## using list comprehension
+        missing_states = [
+            missing_state
+            for missing_state in states
+            if missing_state not in guessed_states
+        ]
         new_data = pandas.DataFrame(missing_states)
+
         new_data.to_csv("states_to_learn.csv")
         break
+    # break
 
     # for every right answer, create a new turtle(word) in the coordinate provided in the csv
     if answer_state in states:

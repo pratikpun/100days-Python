@@ -30,3 +30,5 @@ Some cool projects I have built so far:
 - Day 20, a classic game of **SNAKE**, contains a scoreboard and infinite amount of tries.
 
 - Day 22, another classic game of **PONG**, a two player game using buttons in the keyboard, "W" and "S" / "UP" and "DOWN" to play.
+
+- Day 25, Guessing the US States. Prompt user to guess all the 50 states, and put the correct states in the map in their correct location
